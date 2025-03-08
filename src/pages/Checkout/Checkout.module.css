@@ -1,0 +1,171 @@
+/* Checkout.module.css */
+.checkoutContainer {
+    padding: 40px 20px;
+    min-height: 100vh;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .checkoutContent {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .checkoutContent h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .totalSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .totalSection span:first-child {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .totalPrice {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #6a11cb;
+  }
+  
+  .paymentOptions {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+  }
+  
+  .paymentMethod {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    font-size: 0.95rem;
+  }
+  
+  .paymentMethod:hover {
+    border-color: #6a11cb;
+    background: #fff;
+  }
+  
+  .paymentMethod.active {
+    border-color: #6a11cb;
+    background: #6a11cb;
+    color: white;
+  }
+  
+  .barcodeSection {
+    text-align: center;
+    padding: 20px;
+    margin: 25px 0;
+  }
+  
+  .barcodeSection img {
+    width: 200px;
+    height: auto;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .cardForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .formRow {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .formRow input {
+    flex: 1;
+  }
+  
+  .cardForm input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .payButton {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .payButton:hover {
+    transform: translateY(-2px);
+  }
+  
+  .codConfirmation {
+    text-align: center;
+    padding: 20px;
+    margin-top: 25px;
+  }
+  
+  @media (max-width: 768px) {
+    .checkoutContent {
+      padding: 20px;
+    }
+  
+    .paymentOptions {
+      flex-direction: column;
+    }
+  
+    .paymentMethod {
+      width: 100%;
+      min-width: auto;
+    }
+  
+    .barcodeSection img {
+      width: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .checkoutContent h2 {
+      font-size: 1.5rem;
+    }
+  
+    .totalSection span:first-child {
+      font-size: 1rem;
+    }
+  
+    .totalPrice {
+      font-size: 1.3rem;
+    }
+  }
