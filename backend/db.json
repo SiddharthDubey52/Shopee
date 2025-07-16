@@ -113,6 +113,12 @@
           "quantity": 1
         }
       ]
+    },
+    {
+      "id": "ce8c",
+      "username": "Rolex052",
+      "email": "xyz@gmaIl.com",
+      "password": "1234"
     }
   ]
 }
