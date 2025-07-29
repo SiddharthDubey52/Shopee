@@ -1,8 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { SiShopee } from "react-icons/si";
-import axios from "axios";
+import axios, { Axios } from "axios";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -18,7 +18,17 @@ const Navbar = () => {
     navigate("/");
   };
 
-
+useEffect(()=>{
+const fetchuser = async () => {
+  try{
+    const response = await axios.get('https://user-info-2ud5.onrender.com/api/user-info')
+    console.log("User data fetched successfully:", response.data);
+  } catch (error) {
+    console.error("Error fetching user data:", error);
+  }
+}
+fetchuser();
+},[])
 
   const deleteProfile = async () => {
     console.log("Profile deleted");
